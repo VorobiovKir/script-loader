@@ -4,8 +4,7 @@
 */
 module.exports = function(src) {
 	function log(error) {
-		(typeof console !== "undefined")
-		&& (console.error || console.log)("[Script Loader]", error);
+		window.console && window.console.log('[Script Loader]', error);
 	}
 
 	// Check for IE =< 8
